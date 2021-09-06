@@ -11,8 +11,7 @@
     <?php include "./views/inc/link.php"; ?>
 
 </head>
-<body>
-	
+<body>	
 	<?php
 		$peticionAjax = false;
 		require_once "./controller/vistasControlador.php";
@@ -21,7 +20,15 @@
 		if($vistas == "login" || $vistas == "404"){
 			require_once "./views/content/".$vistas."-view.php";
 		}else{
+			session_start(['name'=>'Sistema']);
 
+			require_once "./controller/loginControlador.php";
+			$lc = new loginControlador();
+			
+			if (!isset($_SESSION['token_sistema']) || !isset($_SESSION['nombre_sistema']) || !isset($_SESSION['privilegio_sistema']) || !isset($_SESSION['id_sistema'])) {
+				echo $lc->forzar_cierre_sesion_controlador();
+				exit();
+			}
 	?>
 	<!-- Main container -->
 	<main class="full-box main-container">
@@ -43,6 +50,7 @@
 	=            Include JavaScript files           =
 	==============================================-->
 	<?php 
+			include "./views/inc/logOut.php";
 		}
 		include "./views/inc/Scripts.php"; 
 	?>

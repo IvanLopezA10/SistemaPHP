@@ -28,10 +28,10 @@
 :root{
 	--color-one: #F5F5F5;
 	--color-two: #24292E;
-	--color-three: #EC5252;
+	--color-three: #415fe4;
 	/*--color-three: #0366D6;*/
 
-	--form-color: #14111A;
+	--form-color: #4b2b8b;
 
 	--accent-color: #253556;
 	/*--accent-color: #455A64;*/
@@ -63,7 +63,7 @@ body,html{
 
 /*----------  Page headers styles  ----------*/
 .page-header{
-	padding: 30px 20px 60px 20px;
+	padding: 30px 20px 0px 20px;
 }
 .page-header > :nth-child(1){
 	padding-bottom: 7px;

@@ -1,4 +1,6 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* @font-face {
     font-family: 'roboto_medium_regular';
     src: url('../webfonts/roboto-medium-webfont.woff2') format('woff2'),
          url('../webfonts/roboto-medium-webfont.woff') format('woff');
@@ -23,7 +25,7 @@
     font-weight: normal;
     font-style: normal;
 
-}
+} */
 
 :root{
 	--color-one: #F5F5F5;
@@ -39,7 +41,8 @@
 }
 
 body,html{
-	font-family: 'roboto_condensed_light';
+	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'roboto_condensed_light'; */
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--color-one);
@@ -165,13 +168,19 @@ table form{
 }
 /*----------  Text Styles  ----------*/
 .roboto-medium{
-	font-family: 'roboto_medium_regular';
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	/* font-family: 'roboto_medium_regular'; */
 }
 .roboto-condensed-light{
-	font-family: 'roboto_condensed_light';
+	/* font-family: 'roboto_condensed_light'; */
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 }
 .roboto-condensed-regular{
-	font-family: 'roboto_condensed_regular';
+	/* font-family: 'roboto_condensed_regular'; */
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 }
 /*----------  Page 404 styles  ----------*/
 .container-404{
@@ -401,7 +410,9 @@ table form{
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--border-color);
 	transition: all .2s ease-in-out;
-	font-family: 'roboto_medium_regular';
+	/* font-family: 'roboto_medium_regular'; */
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 }
 .tile:hover .tile-tittle{
 	color: #FFF;
@@ -418,7 +429,9 @@ table form{
 	font-size: 80px;
 }
 .tile-icon > p{
-	font-family: 'roboto_medium_regular';
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	/* font-family: 'roboto_medium_regular'; */
 	height: 35px;
 	line-height: 35px;
 }

@@ -12,12 +12,18 @@
 <div class="full-box tile-container">
 	
 	<!-- este codigo sireve para darle privilegios a los usuarios de nivel 1 -->
-	<?php if ($_SESSION['privilegio_sistema']==1) { ?>
+	<?php 
+		if ($_SESSION['privilegio_sistema']==1) { 
+			require_once "./controller/usuarioControlador.php";
+			$ins_usuario = new usuarioControlador();
+			$total_usuarios = $ins_usuario -> datos_usuario_controlador("Conteo",0);
+	?>
+	
 	<a href="<?php echo SERVERURL; ?>user-list/" class="tile">
 		<div class="tile-tittle">Usuarios</div>
 		<div class="tile-icon">
 			<i class="fas fa-user-secret fa-fw"></i>
-			<p>50 Registrados</p>
+			<p><?php echo $total_usuarios->rowCount();?> Registrados</p> 
 		</div>
 	</a>
 	<?php } ?>

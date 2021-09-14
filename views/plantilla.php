@@ -21,6 +21,7 @@
 			require_once "./views/content/".$vistas."-view.php";
 		}else{
 			session_start(['name'=>'Sistema']);
+			$pagina = explode("/",$_GET['views']);
 
 			require_once "./controller/loginControlador.php";
 			$lc = new loginControlador();

@@ -658,7 +658,7 @@ class usuarioControlador extends usuarioModelo
 				echo json_encode($alerta);
 				exit();
 			} else {
-				if(mainModel::verificar_datos("[a-zA-Z0-9$@.-]{5,100}", $_POST['usuario_clave_nueva_1']) || $_POST['usuario_clave_nueva_2']){
+				if(mainModel::verificar_datos("[a-zA-Z0-9$@.-]{5,100}", $_POST['usuario_clave_nueva_1']) || mainModel::verificar_datos("[a-zA-Z0-9$@.-]{5,100}",$_POST['usuario_clave_nueva_2'])){
 					$alerta = [
 						"Alerta" => "simple",
 						"Titulo" => "Ocurrió un error inesperado",

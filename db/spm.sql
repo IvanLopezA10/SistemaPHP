@@ -31,7 +31,7 @@ USE prestamos;
 
 CREATE TABLE `cliente` (
   `cliente_id` int(10) NOT NULL,
-  `cliente_dni` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
+  `cliente_rfc` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `cliente_nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `cliente_apellido` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `cliente_telefono` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
@@ -127,7 +127,7 @@ CREATE TABLE `prestamo` (
 
 CREATE TABLE `usuario` (
   `usuario_id` int(10) NOT NULL,
-  `usuario_dni` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
+  `usuario_rfc` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `usuario_nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `usuario_apellido` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `usuario_telefono` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
